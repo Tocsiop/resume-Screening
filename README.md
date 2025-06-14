@@ -1,40 +1,78 @@
 # 🚀 AI-Powered Resume Screening & Ranking System
 
-[![Streamlit App](https://img.shields.io/badge/Live%20Demo-Online-blue?style=for-the-badge)](https://resume-airankinglist.streamlit.app/)
+![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
+![Streamlit](https://img.shields.io/badge/Streamlit-frontend-orange.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 ## 📌 Overview
 
-This project is an AI-driven resume ranking system that helps recruiters and hiring managers efficiently evaluate resumes based on job descriptions. It automates the screening process using **Natural Language Processing (NLP)** and **Machine Learning (ML)** techniques.
+**AI-Powered Resume Screening & Ranking System** is a smart, automated recruitment assistant that helps HR professionals and recruiters efficiently screen and rank resumes based on the relevance to a given job description using advanced **NLP** and **ML** techniques.
+
+By automating resume filtering, this tool saves hours of manual review and ensures that only the most relevant candidates are shortlisted.
+
+---
 
 ## ✨ Features
 
-- 🔍 **Job Description Input**:  
-  - Paste the job description or upload a file.
-  - Supports multiple file formats: `.txt`, `.pdf`, `.jpg`, `.png`, `.jpeg`, `.docx`.
-- 📂 **Resume Upload**:  
-  - Supports multiple file formats: `.txt`, `.pdf`, `.jpg`, `.png`, `.jpeg`, `.docx`.  
-  - Drag-and-drop functionality for easy file uploads.
-- 🏆 **Resume Ranking**:  
-  - AI-based analysis to match resumes with job descriptions.  
-  - Generates rankings based on relevance.
+- 🔍 **Smart Job Description Input**
+  - Paste directly or upload job description files
+  - Supports: `.txt`, `.pdf`, `.docx`, `.jpg`, `.jpeg`, `.png`
+
+- 📂 **Multi-Format Resume Upload**
+  - Upload multiple resumes at once
+  - Supports scanned and digital resumes in formats: `.pdf`, `.docx`, `.txt`, `.jpg`, `.png`, `.jpeg`
+
+- 🧠 **AI-Based Resume Matching**
+  - Uses **TF-IDF** and **Cosine Similarity** to evaluate matching scores
+  - Intelligent filtering using **spaCy** NLP preprocessing
+
+- 📊 **Candidate Ranking Dashboard**
+  - Real-time ranking display with interactive Streamlit UI
+  - Highlights resume scores in percentage
+
+---
 
 ## 🛠 Tech Stack
 
-- **Python** (Core logic)
-- **Streamlit** (UI framework)
-- **NLTK / spaCy** (Natural Language Processing)
-- **Pandas / NumPy** (Data Processing)
-- **Scikit-Learn** (Machine Learning)
-- **PyPDF2 / Docx** (File handling)
+| Layer       | Tools / Libraries |
+|-------------|-------------------|
+| 💻 Frontend | `Streamlit`       |
+| 🧠 NLP      | `spaCy`, `pytesseract`, `pdfplumber`, `docx`, `PIL` |
+| 📊 ML Logic | `scikit-learn` (TF-IDF, Cosine Similarity) |
+| 📈 Data     | `pandas`, `NumPy` |
+| 📁 File Handling | `pdfplumber`, `docx`, `pytesseract`, `PIL` |
+| ⚙️ Utilities | `os`, `subprocess` |
 
+---
 
-## 🎯 How to Use
+## 📷 Screenshots
 
-1. Open the web app.
-2. **Provide a Job Description**:
-   - Paste the job description or upload a file.
-3. **Upload Resumes**:
-   - Drag and drop or select resumes from your system.
-4. **View Rankings**:
-   - The AI system ranks the resumes based on job fit.
+> 📸 *[Include app screenshots here if available]*  
+> (For example: Upload JD, Upload Resumes, Ranked Resume Table)
 
+---
+
+## 🚀 Getting Started
+
+### 🔧 Prerequisites
+
+Ensure you have the following installed:
+- Python 3.8+
+- pip
+- tesseract-ocr (for OCR support)
+
+### 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/ai-resume-ranker.git
+cd ai-resume-ranker
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Optional: install tesseract if not already
+# sudo apt install tesseract-ocr
+
+# Run the app
+streamlit run main.py
