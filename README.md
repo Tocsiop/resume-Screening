@@ -71,8 +71,7 @@ cd ai-resume-ranker
 # Install dependencies
 pip install -r requirements.txt
 
-# Optional: install tesseract if not already
-# sudo apt install tesseract-ocr
+sudo apt install tesseract-ocr
 
 # Run the app
-streamlit run main.py
+streamlit run app.py
